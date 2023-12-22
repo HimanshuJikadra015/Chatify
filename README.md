@@ -1,14 +1,14 @@
 # Chatify
 
-Chatify is a real-time chat application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to chat with each other in real-time using Socket.io
+Chatify is a basic real-time chat application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to chat with each other in real-time using socket.io with enhanced chat experience with emojis.
 
 ## Features
 
-- Login/Register
+- Register
+- Login/Logout
 - Real-time chat functionality
 - Emoji support for enhanced conversations
 - Select/Update avatar for profile personalization
-- Logout
 
 ## Technologies Used
 
