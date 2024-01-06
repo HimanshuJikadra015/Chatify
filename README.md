@@ -1,4 +1,4 @@
-# Chatify
+# Chatify (MERN ChatApp)
 
 Chatify is a basic real-time chat application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It allows users to chat with each other in real-time using socket.io, enhanced chat experience with emojis support.
 
