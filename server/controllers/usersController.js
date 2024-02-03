@@ -41,6 +41,7 @@ module.exports.login=async(req,res,next)=>{
     }
 };
 
+// changes made is here
 module.exports.setAvatar = async (req, res, next) => {
     try {
         const userId = req.params.id;
