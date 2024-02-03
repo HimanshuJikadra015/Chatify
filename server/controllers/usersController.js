@@ -41,16 +41,26 @@ module.exports.login=async(req,res,next)=>{
     }
 };
 
-module.exports.setAvatar=async(req,res,next)=>{
-    try{
+module.exports.setAvatar = async (req, res, next) => {
+    try {
         const userId = req.params.id;
-        const avatarImage =req.body.image;
-        const userData = await User.findByIdAndUpdate(userId,{
+        const avatarImage = req.body.image;
+        console.log("UserID:", userId);
+        console.log("AvatarImage:", avatarImage);
+
+        const userData = await User.findByIdAndUpdate(userId, {
             isAvatarImageSet: true,
             avatarImage,
+        }, { new: true });
+
+        console.log("Updated User Data:", userData);
+
+        return res.json({
+            isSet: userData.isAvatarImageSet,
+            image: userData.avatarImage,
         });
-        return res.json({isSet:userData.isAvatarImageSet,image:userData.avatarImage,});
-    }catch(error){
+    } catch (error) {
+        console.error("Error in setAvatar:", error);
         next(error);
     }
 };
