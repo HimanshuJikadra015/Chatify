@@ -8,7 +8,10 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://chatify-hrj15.netlify.app','https://localhost:3000'],
+    credentials: true,
+}));
 app.use(express.json());
 
 app.use("/api/auth",userRoutes);
